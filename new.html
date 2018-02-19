@@ -1,0 +1,89 @@
+<ion-view view-title="New Customer">
+
+<ion-nav-bar class="bar-positive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+
+
+  <ion-content class="measurementHomeBkgrnd">
+  <div class="float-button">
+      <span class="height-fix">
+        <a class="content" href="#/app/overall">
+          <i class="icon icon-left ion-plus-circled"> </i>
+        </a>
+        
+      </span>
+     </div>
+    
+<form>
+  <div class="list-inset transparen">
+    <label class="item item-input transparent">
+    	<span class="input-label sub">Name</span>
+    	<input type="text" ng-model="firstname" ng-keyup="textEnter()" placeholder="customer's name" required="">
+    </label>
+    <label class="item item-input transparent">
+    	<span class="input-label sub">Phone</span>
+    	<input type="tel" ng-model="lastname" ng-keyup="textEnter()" placeholder="Customer's telephone" required="">
+    </label>
+    <label class="item item-input transparent">
+    	<span class="input-label sub">Address</span>
+    	<input type="text" ng-model="addressText" ng-keyup="textEnter()" placeholder="Customer's address" required="">
+    </label>
+    <label class="item item-input transparent">
+    	<span class="input-label sub">Email</span>
+    	<input type="email" ng-model="emailText" ng-keyup="textEnter()" placeholder="Customer's e-mail" required="">
+    </label>
+    
+
+    <label class="item item-input card item-select transparent">
+    	<span class="input-label sub">Item</span>
+    	<select ng-model="itemText">
+    		<option value="shirt" selected>Shirt</option>
+    		<option value="trousers">Trousers</option>
+            <option value="shorts">Shorts</option>
+            <option value="kaba">Kaba and slit</option>
+            <option value="overall">Overall</option>
+    	</select>
+    	
+    </label>
+    <label class="item item-input" >
+        <button class="button button-small icon icon-left ion-chekmark-circled" type="submit" ng-click="insert()"
+            style="margin-left: auto;
+            margin-right: auto;
+            display: block;">
+            submit Details
+        </button>
+        </label>
+
+
+
+    
+    
+</div>
+
+
+</form>
+ 
+        
+
+  </ion-content>
+
+
+
+
+
+
+
+
+</ion-view>
+
+   
+
+
+
+
+
+
+ 

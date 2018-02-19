@@ -1,0 +1,26 @@
+<ion-view view-title="Calendar">
+
+<ion-nav-bar class="bar-positive">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+  <ion-content class="calendarBkgrnd">
+  <h2 class="royal">Pending Customers</h2>
+  <ion-list>
+    <div class="transparent card" ng-repeat="item in items | orderBy: 'day' | orderBy: 'month' | orderBy: 'year'">
+      <ion-item class="item-avatar transparent" href="#/app/details/{{ item.customerName }}">
+        <img ng-src={{imgURI}} alt="Photo" ng-click="pic()">
+        <h1 class="balanced">{{ item.name }}</h1>
+        <h2 class="positive">{{ item.customerName }}</h2>
+        <h2 class="assertive">{{ item.day}}/{{item.month}}/{{item.year}}</h2>
+        <ion-option-button class="button-assertive" ng-click="onItemDelete(item)">
+        <i class="icon ion-ios-trash"></i>
+      </ion-option-button>
+      </ion-item>
+    </div>
+</div>
+</ion-list>
+  </ion-content>
+</ion-view>
+

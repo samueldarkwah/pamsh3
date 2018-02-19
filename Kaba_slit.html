@@ -1,0 +1,40 @@
+<ion-modal-view class="addCustomerBkgrnd">
+  <ion-header-bar class="bar-calm">
+    <h1 class="title">Kaba and slit Measurements</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeKaba()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="addKaba()">
+      <div class="list transparent">
+        <label class="item item-input transparent">
+          <span class="input-label">Cross Back</span>
+          <input type="text" ng-model="kabaData.crossBack">
+        </label>
+        <label class="item item-input transparent">
+          <span class="input-label">Sleeve</span>
+          <input type="text" ng-model="kabaData.sleeve">
+        </label>
+        <label class="item item-input transparent">
+          <span class="input-label">Top Length</span>
+          <input type="text" ng-model="kabaData.topLength">
+        </label>
+        <label class="item item-input transparent">
+          <span class="input-label">Item Deadline</span>
+          <input type="number" placeholder="Day" ng-model="kabaData.day">
+          <input type="number" placeholder="Month" ng-model="kabaData.month">
+          <input type="number" placeholder="Year" ng-model="kabaData.year">
+        </label>
+         <label class="item item-input item-stacked-label">
+          <span class="input-label">Any comments</span>
+          <textarea ng-model="kabaData.comments" placeholder="You can include more details here"></textarea>
+        </label>
+        <label>
+          <button class="button button-block button-positive" type="submit">Add item</button>
+        </label>
+
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

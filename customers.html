@@ -1,0 +1,41 @@
+<ion-view view-title="Customer list">
+
+<ion-nav-bar class="bar-positive">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+      <a href="#/app/search">
+        <button class="button button-icon button-clear ion-search">
+        </button>
+      </a>
+      </ion-nav-buttons>
+
+</ion-nav-bar>
+
+	<ion-content ng-controller="AppCtrl" class="customersContent">
+  
+
+
+   <ion-list>
+   <div class="card transparent" ng-repeat="category in categories">
+      <ion-item class="transparent item-avatar item-icon-right"  href="">
+            <img src="img/43.jpeg" alt="Photo">
+        <h2 class="balanced">{{ category.Username}} {{category.Password}}</h2>
+        
+        <button class="button button-clear button-assertive" ></button>
+        <ion-option-button class="button-assertive" ng-click="">
+        <i class="icon ion-ios-trash"></i>
+      </ion-option-button>
+      </ion-item>
+    </div>
+</ion-list>
+
+  </ion-content>
+
+  <div class="contentButton">
+    <a class="icon ion-plus-circled" href="#/app/new"></a>
+</div>
+</ion-view>

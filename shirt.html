@@ -1,0 +1,80 @@
+<!--ion-modal-view>
+  <ion-header-bar class="bar-calm">
+    <h1 class="title">Shirt Measurement</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeShirt()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="dark">
+    <form ng-submit="addShirt()">
+      <div class="list transparent">
+        <label class="item item-input transparent">
+          <span class="input-label">Cross Back</span>
+          <input type="text" ng-model="shirtData.crossBack">
+        </label>
+        <label class="item item-input transparent">
+          <span class="input-label">Sleeve</span>
+          <input type="text" ng-model="shirtData.sleeve">
+        </label>
+        <label class="item item-input transparent">
+          <span class="input-label">Top Length</span>
+          <input type="text" ng-model="shirtData.topLength">
+        </label>
+         <label class="item item-input transparent">
+          <span class="input-label">Item Deadline</span>
+          <input type="number" placeholder="Day" ng-model="shirtData.day">
+          <input type="number" placeholder="Month" ng-model="shirtData.month">
+          <input type="number" placeholder="Year" ng-model="shirtData.year">
+        </label>
+        <label class="item item-input item-stacked-label transparent">
+          <span class="input-label">Any comments</span>
+          <textarea ng-model="shirtData.comments" placeholder="You can include more details here"></textarea>
+        </label>
+        <label>
+          <button class="button button-block button-positive" type="submit">Add item</button>
+        </label>
+
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view-->
+
+
+<ion-header no-border>
+  <ion-navbar>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slide-box pager="true" on-slide-changed="slideChanged(index)">
+
+    <ion-slide>
+     <img src="img/aba.jpg">
+        
+            <!-- text here -->hahskskshsjs
+            jdjhkjsksjs
+            jsjksjs
+            <p>jdklsjsjkskskks
+            kskskskks</p>
+
+            <p>jshsjsjsksjss</p>
+          
+    </ion-slide>
+
+    <ion-slide>
+      <img src="img/backG.png" class="slide-image">
+      <h2 class="slide-title" >What is Ionic?</h2>
+      <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="img/backG.png" class="slide-image">
+      <h2 class="slide-title">What is Ionic Pro?</h2>
+      <p><b>Ionic Pro</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.</p>
+    </ion-slide>
+
+
+
+  </ion-slide-box>
+</ion-content>

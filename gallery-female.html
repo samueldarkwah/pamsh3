@@ -1,0 +1,30 @@
+<ion-view view-title="Gallery">
+
+  <ion-content>
+
+<h1>Your collections</h1>
+
+
+
+<br><br>
+        
+        <div class="item item-divider">
+          <i class="ion-images"></i>
+          My Images
+        </div>
+        
+        <a class="item item-list-detail">
+          <ion-scroll direction="x">
+            <img ng-repeat="image in allFemaleImages" ng-src="img/gallery/{{image.src}}" ng-click="showImage($index)" class="image-list-thumb"/>
+          </ion-scroll>
+        </a>
+  </ion-content>
+
+<div class="bar bar-footer bar-positive">
+<div class="button-bar">
+    <a class="button button-positive" href="#/app/gallery-male"><i class="icon icon-top ion-man"></i><span>&nbsp;&nbsp;Male Style</span></a>
+    <a class="button button-positive" href="#/app/gallery-female"><i class="icon ion-woman"></i>&nbsp;&nbsp;Female Styles</a>
+  </div>
+</div>
+
+</ion-view>

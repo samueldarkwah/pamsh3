@@ -1,0 +1,52 @@
+<ion-view view-title="Customer list">
+
+<ion-nav-bar class="bar-positive">
+
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+      <a href="#/app/search">
+        <button class="button button-icon button-clear ion-search">
+        </button>
+      </a>
+      </ion-nav-buttons>
+
+</ion-nav-bar>
+
+  <ion-content class="customersContent">
+
+<ion-list>
+   <div class="card transparent" ng-repeat="customer in customers">
+      <ion-item class="transparent item-avatar item-icon-right"  href="#/app/details/{{ customer.name }}">
+        <a class="item-avatar" href="#/app/home-customers">< <img ng-src={{imgURI}} alt="Photo" ng-click="pic()"></a>
+        <div class="balanced">{{ customer.name }}</div>
+        <a style="margin-left: 50%; position:relative;" href="#/app/home-customers">
+        <button class="button button-clear button-assertive" ng-click="onItemDelete(customer)" ng-show="show == 'true'"><i class="icon assertive ion-ios-trash"></i></button>
+        <button class="button button-clear" ng-click="customerEdit(customer)" ng-show="show == 'true'"><i class="icon assertive ion-edit"></i></button></a>
+        
+        <ion-option-button class="button-dark" ng-click="onItemDelete(customer)">
+        <i class="icon assertive ion-ios-trash"></i>
+      </ion-option-button>
+      <ion-option-button class="button-calm" ng-click="customerEdit(customer)">
+        <i class="icon ion-edit"></i>
+      </ion-option-button>
+      </ion-item>
+    </div>
+</ion-list>
+
+
+
+
+
+  </ion-content>
+
+  <div class="contentButton">
+    <a class="icon ion-plus-circled"href="#/app/new"></a>
+</div>
+</ion-view>

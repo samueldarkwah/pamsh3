@@ -1,0 +1,36 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm">
+    <h1 class="title">Shorts Measurement</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeShorts()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="addMaleCustomerBkgrnd">
+    <form ng-submit="addShorts()">
+      <div class="list transparent">
+        <label class="item item-input transparent">
+          <span class="input-label">Waist</span>
+          <input type="password" ng-model="shortsData.sleeve">
+        </label>
+        <label class="item item-input transparent">
+          <span class="input-label">Shorts Length</span>
+          <input type="password" ng-model="shortsData.topLength">
+        </label>
+         <label class="item item-input transparent">
+          <span class="input-label">Item Deadline</span>
+          <input type="number" placeholder="Day" ng-model="shortsData.day">
+          <input type="number" placeholder="Month" ng-model="shortsData.month">
+          <input type="number" placeholder="Year" ng-model="shortsData.year">
+        </label>
+         <label class="item item-input item-stacked-label">
+          <span class="input-label">Any comments</span>
+          <textarea ng-model="shortsData.comments" placeholder="You can include more details here"></textarea>
+        </label>
+        <label>
+          <button class="button button-block button-positive" type="submit">Add item</button>
+        </label>
+
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,88 @@
+<ion-view view-title="Customer Info">
+
+<ion-nav-bar class="bar-positive">
+	<ion-nav-back-button>
+    </ion-nav-back-button>
+
+ <ion-nav-buttons side="right">
+      <a href="#/app/search">
+        <button class="button button-icon button-clear ion-edit">
+        </button>
+      </a>
+      </ion-nav-buttons>
+
+</ion-nav-bar>
+
+	<ion-content class="detailsBkgrnd">
+
+  <div style="detailsProfile">
+      <img src="img/pams.jpg" alt="Photo" class="pic">
+  </div>
+
+		<div class="card transparent" ng-repeat="customer in customers | filter: { name: whichcustomer }">
+      <ion-item class="">
+      <div>
+      	<span>Name: </span><h2 class="sub">{{ customer.name }}</h2>
+      	<span>Phone: </span><h2 class="sub">{{ customer.phone }}</h2>
+      	<span>Address: </span><h2 class="sub">{{ customer.address }}</h2>
+      	<span>Email: </span><h2 class="sub">{{ customer.email }}</h2>
+        <span>Due date: </span><h2 class="sub">{{ customer.day}}/{{customer.month}}/{{customer.year}}</h2>
+      </div>
+
+      </ion-item>
+    </div>
+<br>
+<hr>
+    <h1 class="assertive">Items</h1>
+
+      </ion-item>
+
+    <div class="card transparent" ng-repeat="item in items | filter: { Name: whichcustomer }">
+      <ion-item class="card">
+      <div>
+        <span>Item name: </span><h2 class="sub">{{ item.name }}</h2>
+        <span>TopLength: </span><h2 class="sub">{{ item.topLength }}</h2>
+        <span>Cross back: </span><h2 class="sub">{{ item.crossBack }}</h2>
+        <span>Deadline: </span><h2 class="sub">{{ item.day}}/{{item.month}}/{{item.year}}</h2>
+      </div>
+
+      </ion-item>
+    </div>
+
+
+
+	</ion-content>
+</ion-view>
+
+
+
+
+
+<br><br>
+        
+        <div class="item item-divider">
+          <i class="ion-images"></i>
+          My Images
+        </div>
+        
+        <a class="item item-list-detail">
+          <ion-scroll direction="x">
+            <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
+          </ion-scroll>
+        </a>
+  
+  <ion-slides pager>
+
+  <ion-slide style="background-color: green">
+    <h2>Slide 1</h2>
+  </ion-slide>
+
+  <ion-slide style="background-color: blue">
+    <h2>Slide 2</h2>
+  </ion-slide>
+
+  <ion-slide style="background-color: red">
+    <h2>Slide 3</h2>
+  </ion-slide>
+
+</ion-slides>
