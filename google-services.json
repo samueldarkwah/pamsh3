@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "188986698388",
+    "firebase_url": "https://pamsh3-f20a2.firebaseio.com",
+    "project_id": "pamsh3-f20a2",
+    "storage_bucket": "pamsh3-f20a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188986698388:android:9529b50798ae7908",
+        "android_client_info": {
+          "package_name": "io.ionic.wonder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188986698388-gc7q2e7hcbabom87h98jvl4efhtf3vqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuVlY6K-EwcGPjGGhvDogFh1WpAY20Esw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
